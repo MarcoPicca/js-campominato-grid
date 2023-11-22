@@ -8,12 +8,15 @@
 
 
 let buttonGame = document.getElementById('button');
+let mainContentEl = document.querySelector('main div.main-content');
 
 // L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
 
 
 
 buttonGame.addEventListener('click', function () {
+    mainContentEl.innerHTML = '';
+
     function getNewSquare(){
         const newSquareElement = document.createElement('article');
         newSquareElement.classList.add('item-square');
@@ -21,7 +24,6 @@ buttonGame.addEventListener('click', function () {
     }
     
     
-    const mainContentEl = document.querySelector('main div.main-content');
     
     for (let i = 1; i <= 100; i++){
         const currentSquare = getNewSquare();
